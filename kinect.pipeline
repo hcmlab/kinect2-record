@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<pipeline>
+	
+	<register>		
+		<load name="audio" />
+		<load name="camera" />
+		<load name="control"/>
+		<load name="graphic" />		
+		<load name="ioput" />							
+		<load name="image"/>	
+		<load name="microsoftkinect2"/>	
+		<load name="skeleton"/>	
+	</register>
+	
+	<!-- control -->
+	
+	<framework waitid="button-wait"/>
+	<runnable create="WaitButton:button-wait" title="CONTROL" label="CLOSE"/>	
+	<runnable create="ControlCheckBox:button-toggle" id="writer*" title="CONTROL" default="false" label="RECORD"/>		
+	
+	<!-- sensors -->
+	
+	<sensor create="MicrosoftKinect2" sr="25.0" trackNearestPersons="1" showFaceTracking="false" showBodyTracking="false">
+		<output channel="rgb" pin="rgb" size="2.0s"/>
+		<output channel="au" pin="au" size="5.0s"/>
+		<output channel="head" pin="head" size="5.0s"/>
+		<output channel="skeleton" pin="skelms" size="5.0s"/>
+		<output channel="face3d" pin="face3d" size="5.0s"/>
+	</sensor>
+	
+	<transformer create="SkeletonConverter" numskel="1">
+		<input pin="skelms;head;face3d" frame="1"/> 
+		<output pin="skel"/>
+	</transformer>	
+		
+	<sensor create="Audio" option="options/audio" sr="48000" scale="true">
+		<output channel="audio" pin="audio"/>		
+	</sensor>	
+	
+	<!-- logging -->
+	
+	<gate open="$(log:use)">
+		<include path="record"/>
+	</gate>	
+	
+	<!-- visualization -->
+	
+	<include path="visualize"/>	
+	
+	<object create="Decorator" icon="true" title="Pipeline">
+	
+		<area pos="0,0,400,500">console</area>
+		<area pos="0,500,400,100" nv="1">button-*</area>		
+		<area pos="400,0,400,600" nh="1">paint-*</area>		
+		
+	</object>			
+		
+</pipeline>

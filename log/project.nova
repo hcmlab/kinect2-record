@@ -1,0 +1,12 @@
+<novaproject version="1">
+	<medias>
+		<media>video.avi</media>		
+	</medias>
+	<signals>
+		<signal>audio.wav</signal>				
+		<signal>kinect.face.stream</signal>				
+		<signal>kinect.head.stream</signal>				
+		<signal>kinect.skel.stream</signal>				
+	</signals>	
+</novaproject>
+

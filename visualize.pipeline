@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-16" standalone="yes"?>
+<pipeline>
+	
+	<consumer create="VideoPainter:paint-video" title="VIDEO" swap="true" flip="false" >
+		<input pin="rgb" frame="1"/>		
+	</consumer>		
+	
+	<transformer create="SkeletonPainter">
+		<input pin="skel" frame="1"/>
+		<output pin="skelpaint"/>
+	</transformer> 
+
+	<consumer create="VideoPainter::paint-skel" title="SKELETON" flip="false">
+		<input pin="skelpaint" frame="1"/>
+	</consumer>
+	
+	<consumer create="SignalPainter:paint-audio" title="AUDIO" size="10" type="2" autoscale="false" fix="-1.0,1.0">
+		<input pin="audio" frame="0.02s"/>
+	</consumer>
+	
+</pipeline>		

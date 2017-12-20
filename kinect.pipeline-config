@@ -1,0 +1,4 @@
+# logging
+
+log:use  	=true
+log:dir 	= log
