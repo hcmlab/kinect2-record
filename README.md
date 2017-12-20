@@ -1,7 +1,7 @@
 # kinect2-record
 How to record Microsoft's Kinect 2 with SSI (http://openssi.net)
 
-![](https://raw.githubusercontent.com/hcmlab/kinect2-record/master/kinect.png)
+![image](https://raw.githubusercontent.com/hcmlab/kinect2-record/master/kinect.png)
 
 # install
 If Python is available run 'do_bin.cmd'
