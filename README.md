@@ -9,11 +9,11 @@ If Python is available run 'do_bin.cmd'
 If not: download https://github.com/hcmlab/ssi/raw/master/bin/x64/vc140/xmlpipe.exe and copy to bin\
 
 # record
-Run do_kinect.cmd
+Run 'do_kinect.cmd'
 
 A recording starts as soon as the 'RECORD' button is checked and stops when it is unchecked (you can do several recordings in a row). Press 'CLOSE' to close the pipeline.
 
-Each recording will be stored with a unique time-stamp in the log\ folder.
+Each recording will be stored with a unique time-stamp to the 'log\' folder.
 
 The following files will be recorded:
 - audio.wav
