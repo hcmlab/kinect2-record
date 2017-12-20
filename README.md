@@ -27,7 +27,7 @@ The following files will be recorded:
 - kinect.head.stream
 - kinect.skel.stream
 
-You can use NOVA (https://github.com/hcmlab/nova) to view the files (by opening 'project.nova')
+You can use NOVA to view the files (by opening 'project.nova'):
 
 https://github.com/hcmlab/nova
 
