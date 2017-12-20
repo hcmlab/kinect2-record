@@ -11,7 +11,7 @@ If not: download https://github.com/hcmlab/ssi/raw/master/bin/x64/vc140/xmlpipe.
 # record
 Run do_kinect.cmd
 
-Check 'RECORD' to start a recording and uncheck to stop it (you can do several recordings in a row).
+A recording starts as soon as the 'RECORD' button is checked and stops when it is unchecked (you can do several recordings in a row). Press 'CLOSE' to close the pipeline.
 
 Each recording will be stored with a unique time-stamp in the log\ folder.
 
