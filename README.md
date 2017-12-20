@@ -1,14 +1,18 @@
-# kinect2-record
+# Kinect2-record
 How to record Microsoft's Kinect 2 with SSI (http://openssi.net)
 
 ![image](https://raw.githubusercontent.com/hcmlab/kinect2-record/master/kinect.png)
 
-# install
+# Install
 If Python is available run 'do_bin.cmd'
 
 If not: download https://github.com/hcmlab/ssi/raw/master/bin/x64/vc140/xmlpipe.exe and copy to bin\
 
-# record
+# Dependencies
+- Visual C++ Redistributable for Visual Studio 2015 https://www.microsoft.com/en-us/download/details.aspx?id=48145
+- Microsoft Kinect 2 Runtime https://www.microsoft.com/en-us/download/details.aspx?id=44559
+
+# Record
 Run 'do_kinect.cmd'
 
 A recording starts as soon as the 'RECORD' button is checked and stops when it is unchecked (you can do several recordings in a row). Press 'CLOSE' to close the pipeline.
@@ -27,8 +31,10 @@ You can use NOVA (https://github.com/hcmlab/nova) to view the files (by opening 
 
 https://github.com/hcmlab/nova
 
-# notes
+# Notes
 At first start select and audio device and a video compression codec. For video compression we recommend 'utvideo' available from (fast and lossless):
 
 http://umezawa.dyndns.info/archive/utvideo/
 
+# License
+see http://openssi.net
