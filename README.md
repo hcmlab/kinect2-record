@@ -4,9 +4,9 @@ How to record Microsoft's Kinect 2 with SSI (http://openssi.net)
 ![image](https://raw.githubusercontent.com/hcmlab/kinect2-record/master/kinect.png)
 
 # Install
-If Python is available run 'do_bin.cmd'
+Run 'do_bin.cmd'
 
-If not: download https://github.com/hcmlab/ssi/raw/master/bin/x64/vc140/xmlpipe.exe and copy to bin\
+If Python is not available: download https://github.com/hcmlab/ssi/raw/master/bin/x64/vc140/xmlpipe.exe and copy to bin\
 
 # Dependencies
 - Visual C++ Redistributable for Visual Studio 2015 https://www.microsoft.com/en-us/download/details.aspx?id=48145
