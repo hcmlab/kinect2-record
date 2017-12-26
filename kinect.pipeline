@@ -7,8 +7,8 @@
 		<load name="control"/>
 		<load name="graphic" />		
 		<load name="ioput" />							
-		<load name="image"/>	
-		<load name="microsoftkinect2"/>	
+		<load name="image" depend="opencv_world310.dll"/>	
+		<load name="microsoftkinect2" depend="Kinect20.Face.dll;Kinect20.Fusion.dll"/>	
 		<load name="skeleton"/>	
 	</register>
 	
